@@ -8,6 +8,8 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pandas = "^2.1.0"
+openai = "^1.0.0" # Add openai dependency
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
