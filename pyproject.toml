@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "lora-linkedin-pipeline"
+version = "0.1.0"
+description = "A tool for generating LinkedIn posts in your personal style using LoRA fine-tuning"
+authors = ["David Rajnoha <drajnoha@seznam.cz>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+lora-linkedin = "src.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
